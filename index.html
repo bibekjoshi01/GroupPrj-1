@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Images</title>
     <link rel="stylesheet" href="Style.css">
+
+    <!-- font awesome -->;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="main-cointaner">
+    <main class="main-container">
 
-        <div class="bgCointaner">
+        <div class="bgContainer">
             <h1>Remove Background</h1>
                 <input type="file" placeholder="Choose A File" id="InputBGfile">
-                <button class="bgUploadBtn" id="UploadBtn">UPLAOD fILE</button>
+                <button class="bgUploadBtn" id="UploadBtn">UPLAOD FILE</button>
         </div>
 
-        <div class="szCointaner">
+        <div class="szContainer">
             <h1>Change Img Size</h1>
+            <div class="uploadBox">
+                <input type="file" id="picture" accept="image/*" hidden>
+            <i class="fa-solid fa-upload"></i>
+            <p>Browse file to Upload</p>
+            </div>
+
+            <div class="changeBox">
+                <div class="width">
+                    <label for="width">Width</label>
+                <input type="number" id="width" min="100">
+                </div>
+                
+                <div class="height">
+                    <label for="height">Height</label>
+                <input type="number" id="height" min="100">
+                </div>
+                
+               <div class="ratio">
+                <input type="checkbox" id="ratio">
+                <label for="ratio">Maintain Aspect Ratio</label>
+               </div>
+            </div>
+
+            <div class="download">Download
+                <i class="fa-solid fa-download"></i>
+            </div>
 
         </div>
 
 
-    </div>
+    </main>
 
 
 
