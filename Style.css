@@ -15,7 +15,7 @@
 }
 
 .bgCointaner{
-
+    display: grid;
     /* border: 2px solid black; */
     border-radius: 30px;
     box-shadow: 0 0 10px rgb(131, 129, 129);
@@ -24,7 +24,10 @@
     padding: 50px;
     text-align: center;
 }
-
+h1{
+    font-family: "Nerko One";
+    color: rgb(143, 201, 201);
+}
 #InputBGfile{
     display: none;
 }
@@ -32,13 +35,13 @@
 .bgUploadBtn{
     font-family: "Urbanist", sans-serif;
     letter-spacing: 0.5px;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 10px 0;
+    padding: 10px;
     border-radius: 20px;
     background-color: rgb(90, 199, 96);
     color: aliceblue;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 
     &:hover{
@@ -48,3 +51,11 @@
 
 }
 
+.hidden{
+    display: none;
+}
+.img-Preview{
+    height: 20rem;
+    width: 100%;
+
+}
