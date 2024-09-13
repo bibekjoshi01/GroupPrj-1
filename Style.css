@@ -1,38 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+
 }
-body{
+
+body {
     /* background:linear-gradient(45deg,var(--teal), var(--burgundy-red));
      */
-     background-color: #1d2a35;
+    background-color: #1d2a35;
 }
-:root{
+
+:root {
     --midnight-blue: #1E2761;
     --royal-blue: #408EC6;
-    --burgundy-red:#7A2048;
+    --burgundy-red: #7A2048;
 
-    --peri:#735DA5;
+    --peri: #735DA5;
     --lilac: #D3C5E5;
-    
-    --teal:#20948B;
+
+    --teal: #20948B;
     --light-green: #6AB187;
 }
-.main-container{
+
+.main-container {
     display: flex;
     height: 100dvh;
     justify-content: space-around;
     align-items: center;
 }
 
-.bgContainer,.szContainer{
-
+.bgContainer,
+.szContainer {
+    display: grid;
     /* border: 2px solid black; */
-    background: linear-gradient(to right, var(--midnight-blue),var(--burgundy-red));
+    background: linear-gradient(to right, var(--midnight-blue), var(--burgundy-red));
     color: white;
     border-radius: 30px;
     box-shadow: 0 0 10px rgb(131, 129, 129);
@@ -42,72 +46,100 @@ body{
     text-align: center;
 }
 
-#InputBGfile{
+h1 {
+    font-family: "Nerko One";
+    color: rgb(143, 201, 201);
+}
+
+#InputBGfile {
     display: none;
 }
 
-.bgUploadBtn{
+.bgUploadBtn {
     font-family: "Urbanist", sans-serif;
     letter-spacing: 0.5px;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 10px 0;
+    padding: 10px;
     border-radius: 20px;
     background-color: rgb(90, 199, 96);
     color: aliceblue;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         color: rgb(255, 255, 255);
         background-color: rgb(62, 156, 86);
     }
 
 }
 
-/* size container */
+.hidden {
+    display: none;
+}
 
-.szContainer{
-    background: linear-gradient(to right, var(--midnight-blue),var(--burgundy-red));
+.img-Preview {
+    height: 20rem;
+    width: 100%;
+
+}
+
+/* ----------------- SIZE CONTAINER ---------------------- */
+
+.szContainer {
+    background: linear-gradient(to right, var(--midnight-blue), var(--burgundy-red));
     color: white;
     display: flex;
     flex-direction: column;
     gap: 15px;
-   
+
 }
 
-.uploadBox{
+.uploadBox,.imageBox{
     cursor: pointer;
     /* background-color: var(--burgundy-red); */
     background-color: var(--midnight-blue);
     /* margin-top: 20px; */
-    border: 1px dashed #Fff ;
+    border: 1px dashed #Fff;
     border-radius: 7px;
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.uploadBox i{
-    font-size: 50px;
+
+    i {
+        font-size: 50px;
+    }
+
+    p {
+        margin-top: 15px;
+    }
+
 }
 
-.uploadBox p{
-    margin-top: 15px;
+.imageBox {
+    display: none;
 }
 
-.changeBox{
-    display: flex;
+#addedImg{
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.changeBox {
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-#width, #height{
+
+#width,
+#height {
     margin-left: 5px;
     border-radius: 5px;
-    outline:none;
+    outline: none;
     border: none;
     font-size: 16px;
     padding: 10px 5px;
@@ -115,17 +147,19 @@ body{
 }
 
 
-input[type="checkbox"]{
-    cursor:pointer;
+input[type="checkbox"] {
+    cursor: pointer;
 }
 
-.download{
+.download {
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     background-color: #026700;
     color: #ffffff;
     cursor: pointer;
-    i{
+
+    i {
         margin-left: 3px;
     }
 }
