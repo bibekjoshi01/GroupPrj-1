@@ -7,12 +7,32 @@
 }
 
 
+
 .main-cointaner{
     display: flex;
     flex-wrap: wrap;
     height: 100dvh;
     justify-content: space-around;
     align-items: center;
+    /* background: linear-gradient(to right, rgb(163 129 255), rgb(255 89 117), rgb(241, 253, 75));    background-size: 400% 400%; */
+    animation: animate 10s infinite ease-in-out;
+}
+@keyframes animate {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .bgCointaner{
@@ -33,7 +53,7 @@ h1{
     display: none;
 }
 
-.bgUploadBtn{
+.bgUploadBtn , .download{
     font-family: "Urbanist", sans-serif;
     letter-spacing: 0.5px;
     margin: 10px 0;
@@ -44,6 +64,7 @@ h1{
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover{
         color: rgb(255, 255, 255);
@@ -52,7 +73,7 @@ h1{
 
 }
 
-.hidden{
+#downloadBtn{
     display: none;
 }
 .img-Preview{

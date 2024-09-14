@@ -1,6 +1,7 @@
 let FileBtn = document.getElementById('InputBGfile');
 let UploadBtn = document.getElementById('UploadBtn');
 let imagePreview = document.getElementById('imgPreview');
+let downloadBtn =document.getElementById('downloadBtn');
 
 imagePreview.addEventListener("click", () => {
     FileBtn.click();
@@ -29,7 +30,7 @@ UploadBtn.addEventListener("click", () => {
         return;
     }
 
-    const apiKey = 'uRQPb98Je8LUqdvMe6PaJaae';
+    const apiKey = 'aJo11o3CvLhVbBRnFmc9iSGV';
 
     const formdata = new FormData();
     formdata.append("image_file", file);
@@ -47,12 +48,25 @@ UploadBtn.addEventListener("click", () => {
         return response.blob();
     }).then(blob =>{
         // console.log(blob);
+        
+        UploadBtn.style.display='none';
+        downloadBtn.style.display='block';
         const url =URL.createObjectURL(blob);
         imagePreview.src=url;
-        
+        // downloadBtn.href = url;
+
+        downloadBtn.addEventListener("click",()=>{
+            downloadBtn.href = url;
+            setTimeout(()=>{
+                imagePreview.src='/imgs/image.png';
+                UploadBtn.style.display='block';
+                downloadBtn.style.display='none';
+            },2000)
+        })
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
         alert('An error occurred while processing the image.');
     });
 });
+
