@@ -9,6 +9,7 @@
 
 .main-cointaner{
     display: flex;
+    flex-wrap: wrap;
     height: 100dvh;
     justify-content: space-around;
     align-items: center;
