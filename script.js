@@ -1,5 +1,5 @@
 let FileBtn =document.getElementById('InputBGfile')
-let UploadBtn =document.getElementById('UploadBtn')
+let UploadBtn =document.getElementById('imgPreview')
 let imagePreview = document.getElementById('imgPreview');
 
 UploadBtn.addEventListener("click",()=>{
