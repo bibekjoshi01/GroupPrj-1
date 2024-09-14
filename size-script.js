@@ -10,7 +10,7 @@ const addedImg = doc.querySelector("#addedImg");
 const imgWidth = doc.querySelector("#width");
 const imgHeight = doc.querySelector("#height");
 
-let file,canvas;
+let file,canvas, isAspectRatio = false, imageWidth,imageHeight;
 
 //initial selection
 uploadBox.addEventListener("click",()=>{
@@ -38,4 +38,51 @@ addedImg.addEventListener('load',(e)=>{
     imgWidth.value = addedImg.naturalWidth;
     imgHeight.value = addedImg.naturalHeight;
 
+    log (imgHeight.value," ",imgWidth.value);
 })
+
+
+    // getting aspect ratio
+    log(isAspectRatio);
+    const getAspectRatio=(e)=>{
+        log(e.target);
+        isAspectRatio = e.target.checked;
+        log(isAspectRatio);
+        ratio = imgWidth.value/imgHeight.value
+    
+        if(isAspectRatio)//if true
+        {
+            imgHeight.addEventListener('change',heightChangeHandler);
+            imgWidth.addEventListener('change',widthChangeHandler);
+            
+        }
+    
+        if(!isAspectRatio){
+            imgHeight.removeEventListener('change',heightChangeHandler);
+            imgWidth.removeEventListener('change',widthChangeHandler);
+        }
+    }
+    
+    heightChangeHandler = (e) =>{
+    imgWidth.value= Math.round(ratio * e.target.value); 
+    log(imgWidth.value," ",imgHeight.value);
+    //ratio = w/h => ratio *h = w
+    }
+    
+    widthChangeHandler = (e) =>{
+        imgHeight.value= Math.round(e.target.value/ratio); 
+        log(imgWidth.value," ",imgHeight.value);
+        //ratio = w/h => h = w/ratio
+        }
+    
+
+//getting height and width
+// function getWidth(){
+//     imageWidth = imgWidth.value;
+// }
+
+// function getHeight() {
+//     imageHeight = imgHeight.value;
+// }
+
+
