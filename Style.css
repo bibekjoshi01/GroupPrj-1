@@ -31,7 +31,8 @@ body {
     height: 100dvh;
     justify-content: space-around;
     align-items: center;
-    /* background: linear-gradient(to right, rgb(163 129 255), rgb(255 89 117), rgb(241, 253, 75));    background-size: 400% 400%; */
+    /* background: linear-gradient(to right, rgb(163 129 255), rgb(255 89 117), rgb(241, 253, 75));    background-size: 400% 400%;
+    background: url(); */
     animation: animate 10s infinite ease-in-out;
 }
 @keyframes animate {
@@ -56,13 +57,14 @@ body {
 .szContainer {
     display: grid;
     /* border: 2px solid black; */
-    background: linear-gradient(to right, var(--midnight-blue), var(--burgundy-red));
+    background: #0c1927;    
     color: white;
     border-radius: 30px;
     box-shadow: 0 0 10px rgb(131, 129, 129);
     height: 500px;
     width: fit-content;
-    padding: 50px;
+    padding: 20px;
+    margin: 40px;
     text-align: center;
 }
 
@@ -87,6 +89,8 @@ h1 {
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
+    border: none;
+    outline: none;
     text-decoration: none;
 
     &:hover {
@@ -109,9 +113,10 @@ h1 {
 /* ----------------- SIZE CONTAINER ---------------------- */
 
 .szContainer {
-    background: linear-gradient(to right, var(--midnight-blue), var(--burgundy-red));
+    /* background: linear-gradient(to right, var(--midnight-blue), var(--burgundy-red)); */
     color: white;
     display: flex;
+    width: 340px;
     flex-direction: column;
     gap: 15px;
 
