@@ -8,9 +8,8 @@
 }
 
 body {
-    /* background:linear-gradient(45deg,var(--teal), var(--burgundy-red));
-     */
-    /* background-color: #1d2a35; */
+    background:linear-gradient(45deg,var(--teal), var(--burgundy-red));
+    background-color: #1d2a35;
 }
 
 :root {
