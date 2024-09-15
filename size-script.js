@@ -10,7 +10,7 @@ const addedImg = doc.querySelector("#addedImg");
 const imgWidth = doc.querySelector("#width");
 const imgHeight = doc.querySelector("#height");
 
-let file,canvas, isAspectRatio = false, imageWidth,imageHeight;
+let file,canvas, isAspectRatio = false;
 
 //initial selection
 uploadBox.addEventListener("click",()=>{
@@ -38,12 +38,12 @@ addedImg.addEventListener('load',(e)=>{
     imgWidth.value = addedImg.naturalWidth;
     imgHeight.value = addedImg.naturalHeight;
 
-    log (imgHeight.value," ",imgWidth.value);
+    // log (imgHeight.value," ",imgWidth.value);
 })
 
 
     // getting aspect ratio
-    log(isAspectRatio);
+    // log(isAspectRatio);
     const getAspectRatio=(e)=>{
         log(e.target);
         isAspectRatio = e.target.checked;
@@ -75,14 +75,28 @@ addedImg.addEventListener('load',(e)=>{
         //ratio = w/h => h = w/ratio
         }
     
+//Download Button
+download.addEventListener('click',()=>{
+    let canvas = document.createElement('canvas');
+    let context = canvas.getContext('2d');
 
-//getting height and width
-// function getWidth(){
-//     imageWidth = imgWidth.value;
-// }
+    // log(context);
 
-// function getHeight() {
-//     imageHeight = imgHeight.value;
-// }
+    canvas.height = imgHeight.value;
+    canvas.width = imgWidth.value;
 
+    // log(canvas.height);
+
+    context.drawImage(addedImg,0,0,canvas.width,canvas.height);
+
+    // log(context,canvas);
+
+    let a = document.createElement('a');
+    a.href=canvas.toDataURL("image/jpeg");
+    //converts the canvas image into a encoded data url of the specified image format(here jpeg)
+    a.download = 'downloaded-image';
+    a.click();
+
+
+})
 
