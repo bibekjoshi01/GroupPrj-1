@@ -16,7 +16,7 @@ body {
 }
 
 :root {
-    --midnight-blue: #23339bbb;
+    --blue: #6069a9bb;
     --royal-blue: #408EC6;
     --burgundy-red: #7A2048;
 
@@ -120,7 +120,7 @@ h1 {
 
 .szContainer {
     box-sizing: border-box;
-    /* background: linear-gradient(to right, var(--midnight-blue), var(--burgundy-red)); */
+    /* background: linear-gradient(to right, var(--blue), var(--burgundy-red)); */
     color: white;
     display: flex;
     width: 340px;
@@ -134,7 +134,7 @@ h1 {
 .uploadBox,.imageBox{
     cursor: pointer;
     /* background-color: var(--burgundy-red); */
-    background-color: var(--midnight-blue);
+    background-color: var(--blue);
     /* margin-top: 20px; */
     border: 1px dashed #Fff;
     border-radius: 7px;
