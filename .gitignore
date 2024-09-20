@@ -1,0 +1,82 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Dependency directories
+jspm_packages/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# System files
+*.swp
+*.swo
+*.swn
+
+# NPM package lock
+package-lock.json
+
+# Yarn lock
+yarn.lock
+
+# Bower configuration
+bower_components/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Custom files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.bak
+
+# Debug files
+*.pid
+*.seed
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Build artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# SASS/SCSS cache
+.sass-cache/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# IDE specific files
+*.sublime-project
+*.sublime-workspace
+*.project
+
+# npm debug log
+npm-debug.log*
