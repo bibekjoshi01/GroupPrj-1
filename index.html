@@ -1,78 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Images</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Style.css" />
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
+  <body>
     <main class="main-container">
+      <div class="bgContainer">
+        <h1>Remove Background</h1>
 
-        <div class="bgContainer">
-            <h1>Remove Background</h1>
+        <input
+          type="file"
+          placeholder="Choose A File"
+          accept="image/*"
+          id="InputBGfile"
+        />
+        <img
+          class="img-Preview"
+          src="./imgs/image.png"
+          id="imgPreview"
+          alt="Image Perview"
+        />
+        <button class="bgUploadBtn" type="button" id="UploadBtn">
+          UPLAOD fILE
+        </button>
+        <a class="download" type="submit" id="downloadBtn" download="image.png"
+          >Download Image</a
+        >
+      </div>
 
-                <input type="file" placeholder="Choose A File" accept="image/*" id="InputBGfile">
-                <img class="img-Preview" src="./imgs/image.png" id="imgPreview"  alt="Image Perview">
-                <button class="bgUploadBtn" type="button"  id="UploadBtn">UPLAOD fILE</button>
-                <a class="download" type="submit" id="downloadBtn" download="image.png">Download Image</a>
-                
-            </div>
-
-
-
-        <!-- -----------------SIZE CONTAINER------------ -->
-        <div class="szContainer">
-            <h1>Change Img Size</h1>
-            <div class="uploadBox">
-                    <input type="file" id="pictureInput" accept="image/*" hidden>
-                    <i class="fa-solid fa-upload"></i>
-                    <p>Browse file to Upload</p>
-                </div>
-
-                <div class="imageBox">
-                    <img src="" id="addedImg">
-                </div>
-
-
-
-            <div class="changeBox">
-                <div class="width">
-                    <label for="width">Width</label>
-                    <input type="number" id="width" min="100">
-                </div>
-
-                <div class="height">
-                    <label for="height">Height</label>
-                    <input type="number" id="height" min="100">
-                </div>
-
-                <div class="ratio">
-                    <input type="checkbox" id="ratio" onchange="getAspectRatio(event)">
-                    <label for="ratio">Maintain Aspect Ratio</label>
-                </div>
-                <div class="download">Download
-                    <i class="fa-solid fa-download"></i>
-                </div>
-            </div>
-
-
+      <!-- -----------------SIZE CONTAINER------------ -->
+      <div class="szContainer">
+        <h1>Change Img Size</h1>
+        <div class="uploadBox">
+          <input type="file" id="pictureInput" accept="image/*" hidden />
+          <i class="fa-solid fa-upload"></i>
+          <p>Browse file to Upload</p>
         </div>
 
+        <div class="imageBox">
+          <img src="" id="addedImg" />
+        </div>
 
+        <div class="changeBox">
+          <div class="width">
+            <label for="width">Width</label>
+            <input type="number" id="width" min="100" />
+          </div>
+
+          <div class="height">
+            <label for="height">Height</label>
+            <input type="number" id="height" min="100" />
+          </div>
+
+          <div class="ratio">
+            <input
+              type="checkbox"
+              id="ratio"
+              onchange="getAspectRatio(event)"
+            />
+            <label for="ratio">Maintain Aspect Ratio</label>
+          </div>
+          <div class="download">
+            Download
+            <i class="fa-solid fa-download"></i>
+          </div>
+        </div>
+      </div>
     </main>
-
-
 
     <script src="script.js"></script>
     <script src="size-script.js"></script>
-</body>
-
+  </body>
 </html>
