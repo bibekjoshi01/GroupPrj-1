@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background: linear-gradient(45deg, var(--teal), var(--burgundy-red));
-  background-color: #1d2a35;
-  /* background:linear-gradient(45deg,var(--teal), var(--burgundy-red));
-     */
-  /* background-color: #1d2a35; */
-}
-
 :root {
   --blue: #6069a9bb;
   --royal-blue: #408ec6;
@@ -25,6 +17,12 @@ body {
   --teal: #20948b;
   --light-green: #6ab187;
 }
+
+body {
+  background: linear-gradient(45deg, var(--teal), var(--burgundy-red));
+  background-color: #1d2a35;
+}
+
 body {
   height: 100dvh;
   background: linear-gradient(
@@ -34,16 +32,17 @@ body {
     rgb(178 191 0 / 58%)
   );
   background-size: 400% 400%;
-  /* background: url(./imgs/1.gif); */
   animation: animate 20s infinite ease-in-out;
 }
-.main-container {
+
+#root {
   display: flex;
   flex-wrap: wrap;
   height: auto;
   justify-content: space-around;
   align-items: center;
 }
+
 @keyframes animate {
   0% {
     background-position: 0% 0%;
@@ -65,7 +64,6 @@ body {
 .bgContainer,
 .szContainer {
   display: grid;
-  /* border: 2px solid black; */
   background: #e9e4ff4a;
   color: white;
   border-radius: 30px;
@@ -121,7 +119,6 @@ h1 {
 
 .szContainer {
   box-sizing: border-box;
-  /* background: linear-gradient(to right, var(--blue), var(--burgundy-red)); */
   color: white;
   display: flex;
   width: 340px;
@@ -134,9 +131,7 @@ h1 {
 .uploadBox,
 .imageBox {
   cursor: pointer;
-  /* background-color: var(--burgundy-red); */
   background-color: var(--blue);
-  /* margin-top: 20px; */
   border: 1px dashed #fff;
   border-radius: 7px;
   height: 45%;
@@ -164,6 +159,7 @@ h1 {
   height: 100%;
   object-fit: contain;
 }
+
 .changeBox {
   display: none;
   flex-direction: column;
